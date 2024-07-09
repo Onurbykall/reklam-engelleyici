@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Reklam Engelleyici",
+  "version": "1.0",
+  "description": "Basit bir reklam engelleyici uzantısı.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
